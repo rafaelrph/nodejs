@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Curso NodeJS - Alura",
+  "main": "products.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelrph/nodejs.git"
+  },
+  "author": "rafaelrph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelrph/nodejs/issues"
+  },
+  "homepage": "https://github.com/rafaelrph/nodejs#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
