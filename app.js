@@ -1,8 +1,11 @@
 var express = require('express');
 var app = express();
 
+app.set('view engine', 'ejs');
+
 app.get('/products', (req, res) => {
-    res.send("<html><head></head><body>List of products Express</body></html>");
+    console.log("teste nodemon");
+    res.render('products/list');
 });
 
 app.listen('3000', () => {
