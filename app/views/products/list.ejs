@@ -8,17 +8,17 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>Code</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Milk</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Steak</td>
-                </tr>
+                <% for(let i=0; i < products.length; i++) { %> 
+                    <tr>
+                        <td><%= products[i].id %></td>
+                        <td><%= products[i].nome %></td>
+                        <td><%= products[i].codigo %></td>
+                    </tr>
+                <% } %>
             </tbody>
         </table>
     </body>

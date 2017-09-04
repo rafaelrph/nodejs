@@ -1,5 +1,5 @@
-var http = require('http');
-var server = http.createServer((request, response) => {
+let http = require('http');
+let server = http.createServer((request, response) => {
     response.end("<html><head></head><body>List of products</body></html>");
 });
 server.listen(3000);
