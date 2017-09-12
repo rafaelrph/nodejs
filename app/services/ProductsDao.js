@@ -1,8 +1,11 @@
+function ProductsDao(connection) {
+    this._connection = connection;
+}
+
+ProductsDao.prototype.lista = function (callback) {
+    this._connection.query("SELECT * FROM operadora", callback);
+}
+
 module.exports = function () {
-    return function(connection) {
-        this.lista = function (callback) {
-            connection.query("SELECT * FROM operadora", callback);
-        }
-        return this;
-    }
+    return ProductsDao;
 }
