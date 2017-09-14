@@ -13,7 +13,7 @@ module.exports = (app) => {
         res.render("products/form");
     });
 
-    app.post('/products/save', (req, res) => {
+    app.post('/products', (req, res) => {
         let product = req.body;
         let connection = app.services.ConnectionFactory();
         let productsDao = new app.services.ProductsDao(connection);
