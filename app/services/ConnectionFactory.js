@@ -9,6 +9,6 @@ function getConnection() {
         host: 'localhost',
         user: 'root',
         password: '',
-        database: 'link'
+        database: 'node'
     });
 }
