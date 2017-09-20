@@ -28,8 +28,14 @@ module.exports = (app) => {
 
         let errors = req.validationErrors();
         if(errors) {
-            res.render("products/form", {errors: errors, product: product});
-            console.log(errors);
+            res.format({
+                html: function() {
+                    res.status(400).render("products/form", {errors: errors, product: product});
+                },
+                json: function() {
+                    res.status(400).json(errors);
+                }
+            });
             return;
         }
 
