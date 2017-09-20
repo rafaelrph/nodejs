@@ -4,16 +4,25 @@
         <title>Products Form</title>
     </head>
     <body>
+        <div class="errors">
+            <% if(errors) {%>
+            <ul>    
+                <% for(let i = 0; i < errors.length; i++) { %>
+                    <li><%= errors[i].param %>: <%=errors[i].msg %></li>
+                <% } %>
+            </ul>
+            <% } %>
+        </div>
         <form action="/products" method="POST">
             <fieldset>
                 <legend>Product</legend>
 
                 <label for="title">Title</label>
-                <input type="text" name="title" id="title" placeholder="Title of product" required/>
+                <input type="text" name="title" id="title" placeholder="Title of product" value="<%= product.title %>"/>
                 <label for="price">Price</label>
-                <input type="text" name="price" id="price" placeholder="Ex. 10.00" required/>
+                <input type="text" name="price" id="price" placeholder="Ex. 10.00" value="<%= product.price %>"/>
                 <label for="description">Description</label>
-                <input type="text" name="description" id="description" placeholder="Description" />
+                <input type="text" name="description" id="description" placeholder="Description" value="<%= product.description %>" />
             </fieldset>
             <input type="submit" value="Save Product" />
         </form>
