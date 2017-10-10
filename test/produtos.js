@@ -1,21 +1,11 @@
-var http = require('http');
-var assert = require('assert');
+var express = require('../config/express')();
+var request = require('supertest')(express);
 
 describe('#ProdutosController', function() {
     it('listagem json', function(done) {
-        let conf = {
-            hostname: 'localhost',
-            port: 3000,
-            path: '/products',
-            headers: {
-                'Accept': 'application/json'
-            }
-        };
-
-        http.get(conf, function(res){
-            assert.equal(res.statusCode, 200);
-            assert.equal(res.headers['content-type'], 'application/json;charset=utf-8');
-            done();
-        });
+        request.get('/products')
+        .set('Accept', 'application/json')
+        .expect('Content-type', /json/)
+        .expect(200, done);            
     });
 });
