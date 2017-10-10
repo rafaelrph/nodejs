@@ -1,9 +1,12 @@
 module.exports = (app) => {
-    app.get('/products', (req, res) => {
+    app.get('/products', (req, res, next) => {
         let connection = app.services.ConnectionFactory();
         let productsDao = new app.services.ProductsDao(connection);
 
         productsDao.list((error, result) => {
+            if(error) {
+                return next(error);
+            }
             res.format({
                 html: function() {
                     res.render('products/list', {products: result});
