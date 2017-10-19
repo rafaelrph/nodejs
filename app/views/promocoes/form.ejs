@@ -6,9 +6,9 @@
             </div>
             <div>
                 <select name="livro[id]">
-                    <%for(var i=0; i<lista.length; i++){%>
-                        <option value="<%=lista[i].id%>"><%=lista[i].titulo%></option>
-                    <%}%>
+                    <% for(var i=0; i < lista.length; i++){ %>
+                        <option value="<%=lista[i].id%>"><%= lista[i].title %></option>
+                    <% } %>
                 </select>
             </div>
             <input type="submit" value="Cadastrar promoção"/>

@@ -1,6 +1,10 @@
-let app = require('./config/express')();
-let productsRoutes = require('./app/routes/products')(app);
+var app = require('./config/express')();
+var productsRoutes = require('./app/routes/products')(app);
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
-app.listen('3000', () => {
+app.set('io', io);
+
+http.listen('3000', () => {
     console.log("Server is running...");
 })

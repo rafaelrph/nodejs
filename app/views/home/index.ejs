@@ -8,8 +8,9 @@
           type="image/ico"/>
     <link href="https://plus.googlecom/108540024862647200608"
           rel="publisher"/>
-    <title>Livros de Java, SOA, Android, iPhone, Ruby on Rails e
-        muito mais - Casa do Código</title>
+    <title>
+        Products de Java, SOA, Android, iPhone, Ruby on Rails e muito mais - Casa do Código
+    </title>
     <link href="/css/site/cssbase-min.css"
           rel="stylesheet" type="text/css" media="all"/>
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'
@@ -55,9 +56,7 @@
 
                 <ul class="clearfix">
                     <li><a href="/cart" rel="nofollow">Seu carrinho</a></li>
-
                     <li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">Sobre</a></li>
-
                     <li><a href="/pages/perguntas-frequentes" rel="nofollow">Perguntas</a></li>
                 </ul>
             </nav>
@@ -66,20 +65,30 @@
 </header>
 <nav class="categories-nav">
     <ul class="container">
-        <li class="category"><a href="http://www.casadocodigo.com.br">Home</a></li>
-        <li class="category"><a href="/collections/livros-de-agile">
-                Agile </a></li>
-        <li class="category"><a href="/collections/livros-de-front-end">
-                Front End </a></li>
-        <li class="category"><a href="/collections/livros-de-games">
-                Games </a></li>
-        <li class="category"><a href="/collections/livros-de-java">
-                Java </a></li>
-        <li class="category"><a href="/collections/livros-de-mobile">
-                Mobile </a></li>
-        <li class="category"><a
-                    href="/collections/livros-desenvolvimento-web"> Web </a></li>
-        <li class="category"><a href="/collections/outros"> Outros </a></li>
+        <li class="category">
+            <a href="http://www.casadocodigo.com.br">Home</a>
+        </li>
+        <li class="category">
+            <a href="/collections/products-de-agile">Agile</a>
+        </li>
+        <li class="category">
+            <a href="/collections/products-de-front-end">Front End </a>
+        </li>
+        <li class="category">
+            <a href="/collections/products-de-games">Games </a>
+        </li>
+        <li class="category">
+            <a href="/collections/products-de-java">Java </a>
+        </li>
+        <li class="category">
+            <a href="/collections/products-de-mobile">Mobile </a>
+        </li>
+        <li class="category">
+            <a href="/collections/products-desenvolvimento-web"> Web </a>
+        </li>
+        <li class="category">
+            <a href="/collections/outros"> Outros </a>
+        </li>
     </ul>
 </nav>
 
@@ -90,9 +99,9 @@
         <%for(i=0; i<3; i++) {%>
         <li class="col-left">
             <a href="linkDetalhe" class="block clearfix">
-                <img width="170" height="240" src="//cdn.shopify.com/s/files/1/0155/7645/products/nodejs-featured_large.png?v=1411486494" alt="<%=livros[i].titulo%>" title="<%=livros[i].titulo%>"/>
+                <img width="170" height="240" src="//cdn.shopify.com/s/files/1/0155/7645/products/nodejs-featured_large.png?v=1411486494" alt="<%=products[i].title%>" title="<%=products[i].title%>"/>
 
-                <h2 class="product-title"><%=livros[i].titulo%></h2>
+                <h2 class="product-title"><%=products[i].title%></h2>
                 <small class="buy-button">Lan&#231;amento!</small>
             </a>
         </li>
@@ -104,15 +113,15 @@
         Aproveite!</h1>
 
     <ul class="clearfix book-collection">
-        <%for(i=0; i<livros.length; i++) {%>
+        <%for(i=0; i<products.length; i++) {%>
             <li>
                 <a href="linkDetalhe" class="block clearfix">
-                    <h2 class="product-title"><%=livros[i].titulo%></h2>
+                    <h2 class="product-title"><%=products[i].title%></h2>
                     <img width="143"
                          height="202"
                          src="//cdn.shopify.com/s/files/1/0155/7645/products/nodejs-featured_large.png?v=1411486494"
-                         alt="<%=livros[i].titulo%>"
-                         title="<%=livros[i].titulo%>"/>
+                         alt="<%=products[i].title%>"
+                         title="<%=products[i].title%>"/>
 
                     <small class="buy-button">Compre</small>
                 </a>
@@ -126,37 +135,30 @@
     <ul id="cdc-diferenciais" class="clearfix">
         <li class="col-left">
             <h3>E-books sem DRM. Leia onde quiser</h3>
-
             <p>
-                <span class="sprite" id="sprite-drm"></span> Nossos e-books não
-                possuem DRM, ou seja, você pode ler em qualquer computador, tablet
-                e smartphone.
+                <span class="sprite" id="sprite-drm"></span> 
+                Nossos e-books não possuem DRM, ou seja, você pode ler em qualquer computador, tablet e smartphone.
             </p>
         </li>
         <li class="col-right">
             <h3>Autores de renome na comunidade</h3>
-
             <p>
-                <span class="sprite" id="sprite-renome"></span> Autores que
-                participam ativamente na comunidade com Open Source, listas de
-                discussão, grupos e mais.
+                <span class="sprite" id="sprite-renome"></span> 
+                Autores que participam ativamente na comunidade com Open Source, listas de discussão, grupos e mais.
             </p>
         </li>
         <li class="col-left">
             <h3>Receba atualizações dos e-books</h3>
-
             <p>
-                <span class="sprite" id="sprite-atualizacoes"></span> Quando você
-                compra um e-book, automaticamente tem direito às atualizações e
-                correções dele.
+                <span class="sprite" id="sprite-atualizacoes"></span> 
+                Quando você compra um e-book, automaticamente tem direito às atualizações e correções dele.
             </p>
         </li>
         <li class="col-right">
             <h3>Livros com curadoria da Caelum</h3>
-
             <p>
-                <span class="sprite" id="sprite-caelum"></span> Desenvolvedores
-                experientes que avaliam e revisam os livros constantemente.
+                <span class="sprite" id="sprite-caelum"></span> 
+                Desenvolvedores experientes que avaliam e revisam os products constantemente.
             </p>
         </li>
     </ul>
@@ -174,16 +176,16 @@
             <!-- cdc-footer -->
             <p class="footer-title">Coleções de Programação</p>
             <ul class="footer-text-links">
-                <li><a href="/collections/livros-de-java">Java</a></li>
-                <li><a href="/collections/livros-desenvolvimento-web">Desenvolvimento
+                <li><a href="/collections/products-de-java">Java</a></li>
+                <li><a href="/collections/products-desenvolvimento-web">Desenvolvimento
                         Web</a></li>
-                <li><a href="/collections/livros-de-mobile">Mobile</a></li>
+                <li><a href="/collections/products-de-mobile">Mobile</a></li>
                 <li><a href="/collections/games">Games</a></li>
-                <li><a href="/collections/livros-de-front-end">Front End</a></li>
+                <li><a href="/collections/products-de-front-end">Front End</a></li>
             </ul>
             <p class="footer-title">Outros Assuntos</p>
             <ul class="footer-text-links">
-                <li><a href="/collections/livros-de-agile">Agile</a></li>
+                <li><a href="/collections/products-de-agile">Agile</a></li>
                 <li><a href="/collections/outros">e outros...</a></li>
             </ul>
         </div>
@@ -191,7 +193,7 @@
             <!-- books-footer -->
             <p class="footer-title">Links da Casa do Código</p>
             <ul class="footer-text-links">
-                <li><a href="http://livros.casadocodigo.com.br" rel="nofollow">Meus
+                <li><a href="http://products.casadocodigo.com.br" rel="nofollow">Meus
                         E-books</a></li>
                 <li><a href="/pages/sobre-a-casa-do-codigo">Sobre a Casa
                         do Código</a></li>
@@ -201,9 +203,9 @@
                         Inovação</a></li>
                 <li><a href="http://www.codecrushing.com/" rel="nofollow">Code
                         Crushing</a></li>
-                <li><a
-                            href="http://www.casadocodigo.com.br/pages/politica-de-privacidade"
-                            rel="nofollow">Política de Privacidade</a></li>
+                <li>
+                    <a href="http://www.casadocodigo.com.br/pages/politica-de-privacidade"rel="nofollow">Política de Privacidade</a>
+                </li>
             </ul>
             <p class="footer-title">Redes Sociais</p>
             <ul>
